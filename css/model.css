@@ -85,3 +85,7 @@ img.diagram {
 xmp {
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
+
+.hide{
+  display:none;  
+}

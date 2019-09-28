@@ -1,0 +1,235 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html class="frame" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>Comercia TP</title>
+
+	<!-- JQUERY (use 1.x branch to be compatible with IE 6/7/8) -->
+	<script type="text/javascript" src="../../lib/jquery/js/jquery-1.11.2.min.js"></script>
+	<!-- BOOTSTRAP -->
+	<link type="text/css" rel="stylesheet" href="../../lib/bootstrap/css/bootstrap-3.3.2.min.css">
+	<link type="text/css" rel="stylesheet" href="../../lib/bootstrap/css/bootstrap-theme-3.3.2.min.css">
+	<script type="text/javascript" src="../../lib/bootstrap/js/bootstrap-3.3.2.min.js"></script>
+	<!-- REPORT SPECIFIC -->
+	<link type="text/css" rel="stylesheet" href="../../css/model.css">
+	<link type="text/css" rel="stylesheet" href="../../css/i18n.css">
+	<script type="text/javascript" src="../../js/frame.js"></script>
+	<script type="text/javascript" src="../../js/imageMapResizer.min.js"></script>
+</head>
+
+<body>
+	<div class="panel panel-default root-panel">
+		<div class="panel-heading root-panel-heading">
+			<b>Comercia TP</b>
+		</div>
+		<div class="panel-body root-panel-body">
+			<div role="tabpanel">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+					<li role="presentation" class="active"><a href="#documentation" aria-controls="documentation" role="tab" data-toggle="tab" class="i18n-documentation"></a></li>
+					<li role="presentation"><a href="#properties" aria-controls="properties" role="tab" data-toggle="tab" class="i18n-properties"></a></li>
+						<li role="presentation"><a href="#query" aria-controls="query" role="tab" data-toggle="tab" class="i18n-query"></a></li>
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="documentation">
+						<textarea id="docsrc" style="display:none"></textarea>
+						<div id="doctgt" style="white-space:pre-wrap"></div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="properties">
+						<table class="table table-striped table-hover table-condensed">
+							<thead>
+								<tr>
+									<th class="i18n-key"></th>
+									<th class="i18n-value"></th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+						<div role="tabpanel" class="tab-pane" id="query">
+						<br>
+						<style>
+						#myprompt {
+						    width: 80%;
+						    font-family: Consolas,Monaco, monospace;
+						}
+						</style>
+
+						<div id='myconsole'></div>
+
+						<p>
+							<tt><span id="useid">alasql</span> &gt;</tt> <input id='myprompt' autofocus/> 
+						</p>
+
+						<script src='../../lib/alasql/alasql.min.js'></script>
+
+						<script>
+							function decodeURL(s) {
+								return decodeURIComponent(s.replace(/\+/g, "%20"));
+							}
+
+							var first = decodeURI(location.search.substr(1));
+						 	alasql.options.logtarget = 'myconsole';
+							alasql.prompt('myprompt','useid');
+							alasql.prompt('myprompt','useid', first);
+
+							var dataElements = [ ];	  
+						  	var dataProperties = [ ];
+						 	var dataRelations = [ ];
+
+										dataElements.push({id:"b855e303-8dab-40c6-87fa-e776365c3e38", type:"BusinessProcess", name:decodeURL("Financiamiento"), description:decodeURL("")});
+										dataElements.push({id:"ca394be8-a980-4c93-a4d7-ea23af8b5c42", type:"BusinessProcess", name:decodeURL("Planeaci%C3%B3n+estrat%C3%A9gica"), description:decodeURL("")});
+										dataElements.push({id:"dcb752b1-4e76-410a-8c2a-c4cfa443c0e0", type:"BusinessProcess", name:decodeURL("Administraci%C3%B3n+de+riesgos"), description:decodeURL("")});
+										dataElements.push({id:"a5a260f1-a23d-475f-a415-4345a4f3654c", type:"BusinessProcess", name:decodeURL("Mejora+de+oferta"), description:decodeURL("")});
+										dataElements.push({id:"4f67db14-fddd-450e-9343-76af00ef50fa", type:"BusinessProcess", name:decodeURL("Relaci%C3%B3n+con+proveedores"), description:decodeURL("")});
+										dataElements.push({id:"15d7d542-095d-4acf-8483-d5b8f3159905", type:"BusinessProcess", name:decodeURL("Implementaci%C3%B3n+de+politicas%2C+normas+y+reglamentos"), description:decodeURL("")});
+										dataElements.push({id:"782bbf03-a4fb-452d-9239-d15d5da95eb2", type:"BusinessProcess", name:decodeURL("Gesti%C3%B3n+de+calidad"), description:decodeURL("")});
+										dataElements.push({id:"0837fdb7-2134-4e70-8bda-e48aac4102f0", type:"BusinessProcess", name:decodeURL("Nuevos+proyectos"), description:decodeURL("")});
+										dataElements.push({id:"813a8c08-4bc0-4bf7-91bb-3b005daafab3", type:"BusinessProcess", name:decodeURL("Reclutamiento+y+selecci%C3%B3n"), description:decodeURL("")});
+										dataElements.push({id:"2c0d478e-711b-494f-a1fc-368f05e1aee5", type:"BusinessProcess", name:decodeURL("Capacitaci%C3%B3n"), description:decodeURL("")});
+										dataElements.push({id:"548863c9-2fe4-4a89-abde-ba4cd71831cf", type:"BusinessProcess", name:decodeURL("Investigaci%C3%B3n+de+mercados"), description:decodeURL("")});
+										dataElements.push({id:"02d829b4-0b5b-4780-aa76-9093306f0fb7", type:"BusinessProcess", name:decodeURL("Evaluaci%C3%B3n+de+desempe%C3%B1o"), description:decodeURL("")});
+										dataElements.push({id:"4921fb6e-097b-48d2-b6dd-5e1ef275ae82", type:"BusinessProcess", name:decodeURL("Elaboraci%C3%B3n+de+planes"), description:decodeURL("")});
+										dataElements.push({id:"6ba2bd3a-a8c8-48fd-b4c3-b48e70f12083", type:"BusinessProcess", name:decodeURL("Soporte+t%C3%A9cnico"), description:decodeURL("")});
+										dataElements.push({id:"09e01306-5f7e-45a7-a01f-8580a23edab9", type:"BusinessProcess", name:decodeURL("Sistemas+de+informaci%C3%B3n"), description:decodeURL("")});
+										dataElements.push({id:"4ac4de9b-65b1-4ac0-85a1-bcec0c57b417", type:"BusinessProcess", name:decodeURL("Contabilidad"), description:decodeURL("")});
+										dataElements.push({id:"0933e579-f9e6-4277-904a-56eabbcdef39", type:"BusinessProcess", name:decodeURL("Monitoreo+de+indicadores"), description:decodeURL("")});
+										dataElements.push({id:"2f3e40c2-adae-46c8-ac76-84e44dd1d9ec", type:"BusinessProcess", name:decodeURL("Promoci%C3%B3n"), description:decodeURL("")});
+										dataElements.push({id:"b0ed0d49-e334-4004-8b63-4c66eb0f8260", type:"BusinessProcess", name:decodeURL("RH"), description:decodeURL("")});
+										dataElements.push({id:"fbd44e74-46f0-41dc-9bb9-8d4c2f15d30b", type:"BusinessFunction", name:decodeURL("RH"), description:decodeURL("")});
+										dataElements.push({id:"4347a5aa-760c-4817-8200-235606ba1fa6", type:"BusinessFunction", name:decodeURL("TI"), description:decodeURL("")});
+										dataElements.push({id:"aab760e0-8764-4331-9008-a3874a1f4875", type:"BusinessFunction", name:decodeURL("Ventas"), description:decodeURL("")});
+										dataElements.push({id:"ea74ba55-4c87-4758-8488-9639c8cc1b02", type:"BusinessProcess", name:decodeURL("Administra+ventas"), description:decodeURL("")});
+										dataElements.push({id:"d16d4060-a27c-4652-899f-3b454d621cf3", type:"BusinessProcess", name:decodeURL("Prospecci%C3%B3n+de+clientes"), description:decodeURL("")});
+										dataElements.push({id:"a9413e5b-d1bd-4a0e-91bc-e7c52c06a7f5", type:"BusinessProcess", name:decodeURL("Visita+clientes"), description:decodeURL("")});
+										dataElements.push({id:"0eacd3be-46e5-4a36-868b-ae9ab3fb6021", type:"BusinessProcess", name:decodeURL("Cotizaci%C3%B3n"), description:decodeURL("")});
+										dataElements.push({id:"4a5b0247-dd85-43eb-a0d8-8a24e2e6426e", type:"BusinessProcess", name:decodeURL("Cierre+de+venta"), description:decodeURL("")});
+										dataElements.push({id:"cd020c15-af90-4331-8b14-f3913f1a561b", type:"BusinessFunction", name:decodeURL("Compras"), description:decodeURL("")});
+										dataElements.push({id:"f97c4387-57e4-483a-b069-921b8075ce0b", type:"BusinessFunction", name:decodeURL("Operaci%C3%B3n"), description:decodeURL("")});
+										dataElements.push({id:"bb474e27-bd76-4f4c-841f-4c72cec9bd4b", type:"BusinessProcess", name:decodeURL("Recepci%C3%B3n"), description:decodeURL("")});
+										dataElements.push({id:"1578028e-563b-4278-a788-81b20a1bd098", type:"BusinessProcess", name:decodeURL("Almacenaje"), description:decodeURL("")});
+										dataElements.push({id:"dcbd4427-235b-4264-8dd7-9397b3fcdb4a", type:"BusinessProcess", name:decodeURL("Surtido+y+empaque"), description:decodeURL("")});
+										dataElements.push({id:"ad0974ff-0e89-453f-ad62-695d474000c9", type:"BusinessProcess", name:decodeURL("Embarque+y+distribuci%C3%B3n"), description:decodeURL("")});
+										dataElements.push({id:"ed45d7fe-8e29-4d9a-8d6b-8b0116f1bb43", type:"BusinessFunction", name:decodeURL(""), description:decodeURL("")});
+										dataElements.push({id:"352feddb-e515-4fa9-8867-b73886c30990", type:"BusinessProcess", name:decodeURL("Asistencia+Posventa"), description:decodeURL("")});
+										dataElements.push({id:"272bdc43-66a3-4550-afc2-9b69a42b415a", type:"BusinessProcess", name:decodeURL("Forecast+de+compras"), description:decodeURL("")});
+										dataElements.push({id:"0f3b86ec-dc27-40b8-8605-38ddd185e14e", type:"BusinessProcess", name:decodeURL("Negociaciones+con+proveedores"), description:decodeURL("")});
+										dataElements.push({id:"c6c905a1-6b41-480e-9611-254ae1cafce1", type:"BusinessProcess", name:decodeURL(""), description:decodeURL("")});
+										dataElements.push({id:"c48622d2-d5e7-4227-9f3e-ce7669eb574e", type:"BusinessProcess", name:decodeURL("Adquisic%C3%B3n+de+mercancias"), description:decodeURL("")});
+										dataElements.push({id:"22952234-f761-4743-88bc-09a74623a508", type:"BusinessProcess", name:decodeURL("Aseguramiento+de+la+calidad"), description:decodeURL("")});
+										dataElements.push({id:"695b461f-b0c0-429e-a2c1-736ebe81f8d3", type:"BusinessProcess", name:decodeURL("Planeaci%C3%B3n+Financiera"), description:decodeURL("")});
+										dataElements.push({id:"393d879b-1c47-4091-bab0-a6a9c666e85e", type:"BusinessFunction", name:decodeURL("Finanzas"), description:decodeURL("")});
+										dataElements.push({id:"74ef0e48-3cc7-4771-9aec-35efbef24d0a", type:"BusinessProcess", name:decodeURL("Control+de+costos+e+impuestos"), description:decodeURL("")});
+										dataElements.push({id:"c2bd58a7-0413-4688-b320-987507eb4e87", type:"BusinessRole", name:decodeURL("Laboratorios"), description:decodeURL("")});
+										dataElements.push({id:"1de7f354-6143-4832-8813-4aa481b290e4", type:"BusinessRole", name:decodeURL("Distribuidores"), description:decodeURL("")});
+										dataElements.push({id:"a7ff178e-c5c8-4b59-babb-027745582937", type:"BusinessRole", name:decodeURL("Almacen"), description:decodeURL("")});
+										dataElements.push({id:"e0e505eb-bd96-4d43-a0a1-f73ab4656dfd", type:"BusinessRole", name:decodeURL("Distribuidores"), description:decodeURL("")});
+										dataElements.push({id:"c874be0b-6843-46d7-b086-9085bff56811", type:"BusinessRole", name:decodeURL("Cadena+de+farmacias"), description:decodeURL("")});
+										dataElements.push({id:"a002497a-c545-482a-b777-61d22532a1aa", type:"BusinessRole", name:decodeURL("Farmacias+independientes"), description:decodeURL("")});
+
+
+										dataElements.push({id:"414591e8-1c69-40e4-aca9-a0d951ca89d1", type:"Grouping", name:decodeURL("Grouping"), description:decodeURL("")});
+										dataElements.push({id:"17cf249b-7052-44fc-998f-29fed754cd55", type:"Grouping", name:decodeURL("Procesos+de+Gesti%C3%B3n"), description:decodeURL("")});
+										dataElements.push({id:"21eb972f-7f39-4c5a-b348-8cf26addf5fc", type:"Grouping", name:decodeURL("Procesos+de+Soporte"), description:decodeURL("")});
+										dataElements.push({id:"ac243f78-f2e2-4b4e-b5df-f535a751f1e1", type:"Grouping", name:decodeURL("Procesos+clave"), description:decodeURL("")});
+										dataElements.push({id:"fbf8f407-024f-48a7-adb2-6e47f2649083", type:"Grouping", name:decodeURL("Proveedores"), description:decodeURL("")});
+										dataElements.push({id:"da3bd29a-2465-42c1-9736-be0eac6b1d96", type:"Grouping", name:decodeURL("Mercado"), description:decodeURL("")});
+
+
+										dataRelations.push({id:"6e346e7f-6bf5-4d3f-a168-12281601b399", type:"CompositionRelationship", name:decodeURL(""), description:decodeURL(""), source:"17cf249b-7052-44fc-998f-29fed754cd55", target:"b855e303-8dab-40c6-87fa-e776365c3e38"});
+										dataRelations.push({id:"40fbfd8d-c6fb-4c4a-a013-ac7e892d3b5e", type:"CompositionRelationship", name:decodeURL(""), description:decodeURL(""), source:"17cf249b-7052-44fc-998f-29fed754cd55", target:"ca394be8-a980-4c93-a4d7-ea23af8b5c42"});
+										dataRelations.push({id:"7f3e22aa-fe69-4e18-bd40-43895fa86cd9", type:"CompositionRelationship", name:decodeURL(""), description:decodeURL(""), source:"17cf249b-7052-44fc-998f-29fed754cd55", target:"dcb752b1-4e76-410a-8c2a-c4cfa443c0e0"});
+										dataRelations.push({id:"c3efe265-23c3-4712-ae96-0f1491beecdb", type:"CompositionRelationship", name:decodeURL(""), description:decodeURL(""), source:"17cf249b-7052-44fc-998f-29fed754cd55", target:"a5a260f1-a23d-475f-a415-4345a4f3654c"});
+										dataRelations.push({id:"6489b58b-c554-4352-a0ce-cabd497894ed", type:"CompositionRelationship", name:decodeURL(""), description:decodeURL(""), source:"17cf249b-7052-44fc-998f-29fed754cd55", target:"4f67db14-fddd-450e-9343-76af00ef50fa"});
+										dataRelations.push({id:"bc3973a1-f3e9-469e-88e2-07079b5b8cc6", type:"CompositionRelationship", name:decodeURL(""), description:decodeURL(""), source:"17cf249b-7052-44fc-998f-29fed754cd55", target:"15d7d542-095d-4acf-8483-d5b8f3159905"});
+										dataRelations.push({id:"44efb6fa-4da9-4028-99ec-277c92121c0e", type:"CompositionRelationship", name:decodeURL(""), description:decodeURL(""), source:"17cf249b-7052-44fc-998f-29fed754cd55", target:"782bbf03-a4fb-452d-9239-d15d5da95eb2"});
+										dataRelations.push({id:"66557fd5-6781-4cf7-bcb1-c7bf57750306", type:"CompositionRelationship", name:decodeURL(""), description:decodeURL(""), source:"17cf249b-7052-44fc-998f-29fed754cd55", target:"0837fdb7-2134-4e70-8bda-e48aac4102f0"});
+										dataRelations.push({id:"db3283fd-e4c0-410e-81b9-26026dcbf1ce", type:"CompositionRelationship", name:decodeURL(""), description:decodeURL(""), source:"21eb972f-7f39-4c5a-b348-8cf26addf5fc", target:"813a8c08-4bc0-4bf7-91bb-3b005daafab3"});
+										dataRelations.push({id:"e2750926-d880-46c1-9636-83531aee6c41", type:"CompositionRelationship", name:decodeURL(""), description:decodeURL(""), source:"21eb972f-7f39-4c5a-b348-8cf26addf5fc", target:"2c0d478e-711b-494f-a1fc-368f05e1aee5"});
+										dataRelations.push({id:"a86204d2-f04f-4fd0-a9b7-2bdb165b7823", type:"CompositionRelationship", name:decodeURL(""), description:decodeURL(""), source:"17cf249b-7052-44fc-998f-29fed754cd55", target:"548863c9-2fe4-4a89-abde-ba4cd71831cf"});
+										dataRelations.push({id:"47ea5609-7431-48e1-b969-f1923cd2dd46", type:"CompositionRelationship", name:decodeURL(""), description:decodeURL(""), source:"21eb972f-7f39-4c5a-b348-8cf26addf5fc", target:"02d829b4-0b5b-4780-aa76-9093306f0fb7"});
+										dataRelations.push({id:"96591c82-1090-45ec-8a20-a5652dc39a47", type:"CompositionRelationship", name:decodeURL(""), description:decodeURL(""), source:"17cf249b-7052-44fc-998f-29fed754cd55", target:"4921fb6e-097b-48d2-b6dd-5e1ef275ae82"});
+										dataRelations.push({id:"d73a87c6-a77f-4967-9207-599afeff13e8", type:"CompositionRelationship", name:decodeURL(""), description:decodeURL(""), source:"21eb972f-7f39-4c5a-b348-8cf26addf5fc", target:"6ba2bd3a-a8c8-48fd-b4c3-b48e70f12083"});
+										dataRelations.push({id:"a90ae88b-c83f-4547-92b4-186af2f0c0d1", type:"CompositionRelationship", name:decodeURL(""), description:decodeURL(""), source:"21eb972f-7f39-4c5a-b348-8cf26addf5fc", target:"09e01306-5f7e-45a7-a01f-8580a23edab9"});
+										dataRelations.push({id:"691decad-2e0d-4783-bfc7-2e4706259f02", type:"CompositionRelationship", name:decodeURL(""), description:decodeURL(""), source:"21eb972f-7f39-4c5a-b348-8cf26addf5fc", target:"4ac4de9b-65b1-4ac0-85a1-bcec0c57b417"});
+										dataRelations.push({id:"bc5fc210-bb81-4ef7-aedb-da8178fc58ee", type:"CompositionRelationship", name:decodeURL(""), description:decodeURL(""), source:"21eb972f-7f39-4c5a-b348-8cf26addf5fc", target:"0933e579-f9e6-4277-904a-56eabbcdef39"});
+										dataRelations.push({id:"6d54a8c0-5463-4bde-a0bd-25eb131965c6", type:"CompositionRelationship", name:decodeURL(""), description:decodeURL(""), source:"21eb972f-7f39-4c5a-b348-8cf26addf5fc", target:"2f3e40c2-adae-46c8-ac76-84e44dd1d9ec"});
+										dataRelations.push({id:"502dca71-ee6f-43e5-a452-5dfff9663aff", type:"CompositionRelationship", name:decodeURL(""), description:decodeURL(""), source:"21eb972f-7f39-4c5a-b348-8cf26addf5fc", target:"b0ed0d49-e334-4004-8b63-4c66eb0f8260"});
+										dataRelations.push({id:"60b25562-efe5-4cdc-9e64-5c06c702fb75", type:"AggregationRelationship", name:decodeURL(""), description:decodeURL(""), source:"b0ed0d49-e334-4004-8b63-4c66eb0f8260", target:"813a8c08-4bc0-4bf7-91bb-3b005daafab3"});
+										dataRelations.push({id:"8d65b001-41af-4dbd-8241-1d2ebb03b6e1", type:"AggregationRelationship", name:decodeURL(""), description:decodeURL(""), source:"b0ed0d49-e334-4004-8b63-4c66eb0f8260", target:"2c0d478e-711b-494f-a1fc-368f05e1aee5"});
+										dataRelations.push({id:"3d223da1-f858-4c6c-9842-f545533e32f3", type:"AggregationRelationship", name:decodeURL(""), description:decodeURL(""), source:"b0ed0d49-e334-4004-8b63-4c66eb0f8260", target:"02d829b4-0b5b-4780-aa76-9093306f0fb7"});
+										dataRelations.push({id:"e2fdcf67-b15e-493f-b0a3-3b2c23abc318", type:"CompositionRelationship", name:decodeURL(""), description:decodeURL(""), source:"21eb972f-7f39-4c5a-b348-8cf26addf5fc", target:"fbd44e74-46f0-41dc-9bb9-8d4c2f15d30b"});
+										dataRelations.push({id:"813ae846-247e-4878-9c90-2c099b231b12", type:"CompositionRelationship", name:decodeURL(""), description:decodeURL(""), source:"fbd44e74-46f0-41dc-9bb9-8d4c2f15d30b", target:"2c0d478e-711b-494f-a1fc-368f05e1aee5"});
+										dataRelations.push({id:"eccac37f-63e1-49e2-8c4f-7d1b982634c2", type:"CompositionRelationship", name:decodeURL(""), description:decodeURL(""), source:"fbd44e74-46f0-41dc-9bb9-8d4c2f15d30b", target:"02d829b4-0b5b-4780-aa76-9093306f0fb7"});
+										dataRelations.push({id:"b47c6936-47de-49ea-9ceb-7d1942799974", type:"CompositionRelationship", name:decodeURL(""), description:decodeURL(""), source:"fbd44e74-46f0-41dc-9bb9-8d4c2f15d30b", target:"813a8c08-4bc0-4bf7-91bb-3b005daafab3"});
+										dataRelations.push({id:"9480a3c0-d895-4945-ae07-4831aec851db", type:"CompositionRelationship", name:decodeURL(""), description:decodeURL(""), source:"21eb972f-7f39-4c5a-b348-8cf26addf5fc", target:"4347a5aa-760c-4817-8200-235606ba1fa6"});
+										dataRelations.push({id:"b1b5b00a-ff17-45e6-9530-491bc7142e29", type:"CompositionRelationship", name:decodeURL(""), description:decodeURL(""), source:"4347a5aa-760c-4817-8200-235606ba1fa6", target:"09e01306-5f7e-45a7-a01f-8580a23edab9"});
+										dataRelations.push({id:"af8f39ee-2bc5-4f01-a096-1654a29c8e09", type:"CompositionRelationship", name:decodeURL(""), description:decodeURL(""), source:"4347a5aa-760c-4817-8200-235606ba1fa6", target:"6ba2bd3a-a8c8-48fd-b4c3-b48e70f12083"});
+										dataRelations.push({id:"4589a155-e6ed-4cfb-be2d-f9d3b8d4fc86", type:"CompositionRelationship", name:decodeURL(""), description:decodeURL(""), source:"ac243f78-f2e2-4b4e-b5df-f535a751f1e1", target:"aab760e0-8764-4331-9008-a3874a1f4875"});
+										dataRelations.push({id:"37c31c9f-97e6-4ccc-b9a8-20050d00db4c", type:"CompositionRelationship", name:decodeURL(""), description:decodeURL(""), source:"aab760e0-8764-4331-9008-a3874a1f4875", target:"ea74ba55-4c87-4758-8488-9639c8cc1b02"});
+										dataRelations.push({id:"88ab4b5a-7b45-47bf-847e-c67a75567e88", type:"CompositionRelationship", name:decodeURL(""), description:decodeURL(""), source:"aab760e0-8764-4331-9008-a3874a1f4875", target:"d16d4060-a27c-4652-899f-3b454d621cf3"});
+										dataRelations.push({id:"4efb5123-79bc-4a33-a8b6-6e043e1d7b8d", type:"CompositionRelationship", name:decodeURL(""), description:decodeURL(""), source:"ea74ba55-4c87-4758-8488-9639c8cc1b02", target:"a9413e5b-d1bd-4a0e-91bc-e7c52c06a7f5"});
+										dataRelations.push({id:"63abcec8-950a-448d-8874-7ac4523492fc", type:"CompositionRelationship", name:decodeURL(""), description:decodeURL(""), source:"ea74ba55-4c87-4758-8488-9639c8cc1b02", target:"0eacd3be-46e5-4a36-868b-ae9ab3fb6021"});
+										dataRelations.push({id:"0976ac38-27ad-4d02-b094-01ac7d99642b", type:"CompositionRelationship", name:decodeURL(""), description:decodeURL(""), source:"ea74ba55-4c87-4758-8488-9639c8cc1b02", target:"4a5b0247-dd85-43eb-a0d8-8a24e2e6426e"});
+										dataRelations.push({id:"6182231f-35ae-42e6-9be9-9514764edf75", type:"CompositionRelationship", name:decodeURL(""), description:decodeURL(""), source:"ac243f78-f2e2-4b4e-b5df-f535a751f1e1", target:"cd020c15-af90-4331-8b14-f3913f1a561b"});
+										dataRelations.push({id:"dea01e63-c9a2-4c29-9828-fa8fea3c9a5e", type:"CompositionRelationship", name:decodeURL(""), description:decodeURL(""), source:"ac243f78-f2e2-4b4e-b5df-f535a751f1e1", target:"f97c4387-57e4-483a-b069-921b8075ce0b"});
+										dataRelations.push({id:"7e94e92d-0e73-499e-ab73-312560c78425", type:"CompositionRelationship", name:decodeURL(""), description:decodeURL(""), source:"f97c4387-57e4-483a-b069-921b8075ce0b", target:"bb474e27-bd76-4f4c-841f-4c72cec9bd4b"});
+										dataRelations.push({id:"178a757d-79de-490d-baf8-777f35b8c8a8", type:"CompositionRelationship", name:decodeURL(""), description:decodeURL(""), source:"f97c4387-57e4-483a-b069-921b8075ce0b", target:"1578028e-563b-4278-a788-81b20a1bd098"});
+										dataRelations.push({id:"aa70df3c-1c96-4755-b844-35c6eeb0b7e6", type:"CompositionRelationship", name:decodeURL(""), description:decodeURL(""), source:"f97c4387-57e4-483a-b069-921b8075ce0b", target:"dcbd4427-235b-4264-8dd7-9397b3fcdb4a"});
+										dataRelations.push({id:"01ae6a9f-45e3-4ceb-b8de-62bdf45b9a03", type:"CompositionRelationship", name:decodeURL(""), description:decodeURL(""), source:"f97c4387-57e4-483a-b069-921b8075ce0b", target:"ad0974ff-0e89-453f-ad62-695d474000c9"});
+										dataRelations.push({id:"c503a337-bc42-4ef9-a362-21369b2cc2a5", type:"CompositionRelationship", name:decodeURL(""), description:decodeURL(""), source:"aab760e0-8764-4331-9008-a3874a1f4875", target:"352feddb-e515-4fa9-8867-b73886c30990"});
+										dataRelations.push({id:"434c094b-9aa2-49c9-b676-db16e1683b9a", type:"CompositionRelationship", name:decodeURL(""), description:decodeURL(""), source:"cd020c15-af90-4331-8b14-f3913f1a561b", target:"272bdc43-66a3-4550-afc2-9b69a42b415a"});
+										dataRelations.push({id:"d93553ef-4fee-40c8-a6d0-5e7872f997f0", type:"CompositionRelationship", name:decodeURL(""), description:decodeURL(""), source:"cd020c15-af90-4331-8b14-f3913f1a561b", target:"0f3b86ec-dc27-40b8-8605-38ddd185e14e"});
+										dataRelations.push({id:"814b5afe-c2aa-436b-84e8-23db1806e946", type:"CompositionRelationship", name:decodeURL(""), description:decodeURL(""), source:"cd020c15-af90-4331-8b14-f3913f1a561b", target:"c6c905a1-6b41-480e-9611-254ae1cafce1"});
+										dataRelations.push({id:"3e6aef0a-776b-4308-abae-787bda466032", type:"CompositionRelationship", name:decodeURL(""), description:decodeURL(""), source:"cd020c15-af90-4331-8b14-f3913f1a561b", target:"c48622d2-d5e7-4227-9f3e-ce7669eb574e"});
+										dataRelations.push({id:"b58dfc85-54b4-40a4-b97b-4885eb13fcdf", type:"CompositionRelationship", name:decodeURL(""), description:decodeURL(""), source:"21eb972f-7f39-4c5a-b348-8cf26addf5fc", target:"22952234-f761-4743-88bc-09a74623a508"});
+										dataRelations.push({id:"e3e459a9-93f7-4b56-b9d1-f5c4454a73ce", type:"CompositionRelationship", name:decodeURL(""), description:decodeURL(""), source:"17cf249b-7052-44fc-998f-29fed754cd55", target:"695b461f-b0c0-429e-a2c1-736ebe81f8d3"});
+										dataRelations.push({id:"3d35cec3-824e-4f4d-bccf-0bee59eabbb1", type:"CompositionRelationship", name:decodeURL(""), description:decodeURL(""), source:"21eb972f-7f39-4c5a-b348-8cf26addf5fc", target:"393d879b-1c47-4091-bab0-a6a9c666e85e"});
+										dataRelations.push({id:"c11c686c-cf1c-4f88-93ab-9e00a6268c2d", type:"CompositionRelationship", name:decodeURL(""), description:decodeURL(""), source:"393d879b-1c47-4091-bab0-a6a9c666e85e", target:"0933e579-f9e6-4277-904a-56eabbcdef39"});
+										dataRelations.push({id:"4115fd3b-e612-4a46-955e-e1eba606d110", type:"CompositionRelationship", name:decodeURL(""), description:decodeURL(""), source:"393d879b-1c47-4091-bab0-a6a9c666e85e", target:"4ac4de9b-65b1-4ac0-85a1-bcec0c57b417"});
+										dataRelations.push({id:"e1be72e6-65bd-440b-83be-afd18a7435fb", type:"CompositionRelationship", name:decodeURL(""), description:decodeURL(""), source:"393d879b-1c47-4091-bab0-a6a9c666e85e", target:"74ef0e48-3cc7-4771-9aec-35efbef24d0a"});
+										dataRelations.push({id:"dc41031f-7786-43cf-a8a0-878bb509736b", type:"AssociationRelationship", name:decodeURL("Proporciona+informaci%C3%B3n"), description:decodeURL(""), source:"aab760e0-8764-4331-9008-a3874a1f4875", target:"f97c4387-57e4-483a-b069-921b8075ce0b"});
+										dataRelations.push({id:"40a14a6a-d497-4482-a274-e1aa75ae8d0d", type:"AssociationRelationship", name:decodeURL("Proporciona+informaci%C3%B3n"), description:decodeURL(""), source:"f97c4387-57e4-483a-b069-921b8075ce0b", target:"aab760e0-8764-4331-9008-a3874a1f4875"});
+										dataRelations.push({id:"32838639-9dcc-4239-a33a-e47ddd19d97a", type:"CompositionRelationship", name:decodeURL(""), description:decodeURL(""), source:"fbf8f407-024f-48a7-adb2-6e47f2649083", target:"c2bd58a7-0413-4688-b320-987507eb4e87"});
+										dataRelations.push({id:"6ff9b954-5754-41a9-b504-7114ad9102c1", type:"CompositionRelationship", name:decodeURL(""), description:decodeURL(""), source:"fbf8f407-024f-48a7-adb2-6e47f2649083", target:"1de7f354-6143-4832-8813-4aa481b290e4"});
+										dataRelations.push({id:"a3e8240c-606a-491e-9747-528c7206d070", type:"CompositionRelationship", name:decodeURL(""), description:decodeURL(""), source:"fbf8f407-024f-48a7-adb2-6e47f2649083", target:"a7ff178e-c5c8-4b59-babb-027745582937"});
+										dataRelations.push({id:"db2ca6c0-d580-471d-bebd-c358d565e20e", type:"AssociationRelationship", name:decodeURL("Suministran"), description:decodeURL(""), source:"cd020c15-af90-4331-8b14-f3913f1a561b", target:"c2bd58a7-0413-4688-b320-987507eb4e87"});
+										dataRelations.push({id:"528a8804-3ceb-4c18-9f67-1c19be2987c8", type:"AssociationRelationship", name:decodeURL("Suministran"), description:decodeURL(""), source:"cd020c15-af90-4331-8b14-f3913f1a561b", target:"1de7f354-6143-4832-8813-4aa481b290e4"});
+										dataRelations.push({id:"bb791acb-4824-45c3-88b0-729c2eea8c9a", type:"AssociationRelationship", name:decodeURL("Soporta+a+"), description:decodeURL(""), source:"f97c4387-57e4-483a-b069-921b8075ce0b", target:"a7ff178e-c5c8-4b59-babb-027745582937"});
+										dataRelations.push({id:"e9b215bb-a186-45ca-a8be-bb4a3b23a855", type:"AssociationRelationship", name:decodeURL("Proporciona+informaci%C3%B3n"), description:decodeURL(""), source:"cd020c15-af90-4331-8b14-f3913f1a561b", target:"f97c4387-57e4-483a-b069-921b8075ce0b"});
+										dataRelations.push({id:"16494c41-024c-417a-8063-6540bf5ddc23", type:"CompositionRelationship", name:decodeURL(""), description:decodeURL(""), source:"da3bd29a-2465-42c1-9736-be0eac6b1d96", target:"e0e505eb-bd96-4d43-a0a1-f73ab4656dfd"});
+										dataRelations.push({id:"31aec3ae-d522-40d8-b8ad-b5acb3ae156e", type:"CompositionRelationship", name:decodeURL(""), description:decodeURL(""), source:"da3bd29a-2465-42c1-9736-be0eac6b1d96", target:"c874be0b-6843-46d7-b086-9085bff56811"});
+										dataRelations.push({id:"10f9e3a3-5dba-49d6-8c20-8cff051cfc2b", type:"CompositionRelationship", name:decodeURL(""), description:decodeURL(""), source:"da3bd29a-2465-42c1-9736-be0eac6b1d96", target:"a002497a-c545-482a-b777-61d22532a1aa"});
+										dataRelations.push({id:"85e7af90-c73b-4f23-999a-93a6a169e0db", type:"AssociationRelationship", name:decodeURL(""), description:decodeURL(""), source:"aab760e0-8764-4331-9008-a3874a1f4875", target:"da3bd29a-2465-42c1-9736-be0eac6b1d96"});
+										dataRelations.push({id:"656c6fe4-ea46-4639-828e-4818b13d11bd", type:"ServingRelationship", name:decodeURL("Sirve"), description:decodeURL(""), source:"aab760e0-8764-4331-9008-a3874a1f4875", target:"da3bd29a-2465-42c1-9736-be0eac6b1d96"});
+
+
+										dataElements.push({id:"_cGOT0MkOEemPk50vzqGdcQ", type:"CanvasModel", name:decodeURL("ArchiMate+3.0+Notation+Overview+-+Low+saturation+color+scheme"), description:decodeURL("")});
+										dataElements.push({id:"_tthhsMkOEemPk50vzqGdcQ", type:"CanvasModel", name:decodeURL("Business+Model+Canvas"), description:decodeURL("")});
+										dataElements.push({id:"e3837dfa-3e78-42a2-a688-a7b706383b3f", type:"ArchimateDiagramModel", name:decodeURL("GENERAL"), description:decodeURL("")});
+										dataElements.push({id:"23cc6997-faad-4e5d-aefc-c558601d10ca", type:"CanvasModel", name:decodeURL("CadenaDeValor"), description:decodeURL("")});
+										dataElements.push({id:"7026f46f-ac8c-4f3a-8606-a7427210483d", type:"CanvasModel", name:decodeURL("Mapa+modelo+Rummler-Brache"), description:decodeURL("")});
+
+
+
+
+
+						    alasql('CREATE TABLE Elements');
+						    alasql('CREATE TABLE Properties');
+						    alasql('CREATE TABLE Relations');
+
+						    alasql.tables.Elements.data = dataElements;
+						    alasql.tables.Properties.data = dataProperties;
+						    alasql.tables.Relations.data = dataRelations;
+						</script> 
+						</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">imageMapResize();</script>
+</body>
+</html>
